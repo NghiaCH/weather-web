@@ -1,0 +1,348 @@
+.landingPage {
+  position: relative;
+  &-bg {
+    z-index: -1;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-search {
+    padding: 56px 32px;
+    height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-form {
+      width: 50%;
+      margin-bottom: 16px;
+
+      &-head {
+        color: #fff;
+        font-size: 18px;
+        padding: 0 0 8px;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------- result
+
+.result {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-current {
+    margin: 0 64px;
+    padding: 32px 64px;
+
+    &-temp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-info {
+        font-size: 84px;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        line-height: 1.07;
+      }
+    }
+
+    &-hourlyBox {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    &-hourlyBox::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-box {
+      background-color: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      margin-bottom: 32px;
+    }
+
+    &-1 {
+      padding: 12px 12px 16px;
+
+      &-head {
+        display: flex;
+        justify-content: space-between;
+
+        &-btn {
+          backdrop-filter: blur(20px);
+          border: 1px solid #d0d0d040;
+          background-color: #d0d0d040;
+        }
+      }
+    }
+
+    &-2 {
+      padding: 16px;
+
+      &-box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-item {
+        width: 45%;
+      }
+    }
+
+    &-3 {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+
+      &-head {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      &-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        &-btnBox {
+          width: 4%;
+          min-width: 42px;
+        }
+
+        &-btn {
+          padding: none;
+          display: flex;
+          // backdrop-filter: blur(20px);
+          // border: 1px solid #d0d0d040;
+          // background-color: #d0d0d040;
+        }
+      }
+    }
+
+    &-4 {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+
+      &-head {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      &-body {
+        padding: 16px 0;
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      padding: 0 6px 6px;
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+//----------------------------------------------------------------- hourly
+
+.hourly {
+  padding: 16px;
+  border-right: 1px solid #000;
+  width: max-content;
+
+  &:last-child {
+    border: none;
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &-hour {
+      font-weight: 500;
+    }
+
+    &-container {
+      padding-left: 6px;
+    }
+
+    &-info {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.7px;
+      line-height: 1.07;
+      text-align: center;
+    }
+
+    &-realfeel {
+      width: max-content;
+    }
+  }
+}
+
+//----------------------------------------------------------------- favourite
+
+.landingPage .favourite {
+  width: 50%;
+
+  &-head {
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--bs-body-font-family);
+    padding: 0 0 8px;
+  }
+
+  &-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-btnBox {
+      position: absolute;
+
+      &-btn {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+      }
+
+      &-btn1 {
+        left: -45px;
+        display: flex;
+      }
+
+      &-btn2 {
+        right: -40px;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &-item {
+        backdrop-filter: blur(20px);
+        background: #00000040;
+        color: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+
+        &-common {
+          width: 45%;
+          min-width: 45%;
+          height: 100%;
+          margin: 0 2.5%;
+
+          // &:last-child {
+          //   margin-right: 0;
+          // }
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+        }
+
+        &-location {
+          font-size: 18px;
+          line-height: 1.22;
+          margin-right: 0;
+          height: 43.9px;
+        }
+
+        &-temp {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 30px;
+        }
+
+        &-realfeel {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------- accordionItem
+
+.accordionItem {
+  &-head {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-day {
+      width: 90px;
+      font-size: 18px;
+    }
+
+    &-img {
+      width: 64px;
+      height: 60px;
+    }
+
+    &-temp {
+      width: 25px;
+      font-size: 18px;
+    }
+
+    &-realfeel {
+      width: 120px;
+      font-size: 18px;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &-col {
+      width: 45%;
+
+      &-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 6px 6px;
+        border-bottom: 1px solid;
+        font-size: 18px;
+      }
+    }
+  }
+}

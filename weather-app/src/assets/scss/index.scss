@@ -1,0 +1,26 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+///---------------------------------------------layouts
+@import './components/layouts/header/index.scss';
+
+///---------------------------------------------screen
+@import './components/screen/landingPage/index.scss';
+
+///---------------------------------------------common
+@import './components//common//skeleton/index.scss';
+
+html {
+    scroll-behavior: smooth
+}
+
+.justifySpacebetween { 
+    justify-content: space-between;
+}
+
+.borRa10px::before {
+    border-radius: 10px;
+}
+
+.borRa10px {
+    border-radius: 10px;
+}

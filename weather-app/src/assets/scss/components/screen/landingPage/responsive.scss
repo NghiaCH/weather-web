@@ -1,0 +1,201 @@
+@media screen and (max-width: 1023px) {
+  .landingPage {
+    &-search {
+    }
+  }
+
+  .landingPage .favourite {
+    &-main {
+      &-btnBox {
+        display: none;
+      }
+
+      &-content {
+        flex-direction: column;
+        overflow-y: scroll;
+        width: 100%;
+        &-item {
+          flex-direction: row;
+          align-items: center;
+          padding: 8px 12px;
+
+          &-common {
+            width: 100%;
+            min-height: 48px;
+            height: 48px;
+            margin: 0 0 8px;
+
+            &::before {
+              height: 48px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &-location {
+            height: max-content;
+            font-size: 14px;
+          }
+
+          &-temp {
+            font-size: 24px;
+            height: max-content;
+          }
+
+          &-realfeel {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .result {
+    &-current {
+      padding: 32px 0;
+      &-temp {
+        &-info {
+          font-size: 60px;
+        }
+      }
+
+      &-info {
+        font-size: 16px;
+      }
+
+      &-2 {
+        &-box {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &-item {
+          width: 95%;
+        }
+      }
+
+      &-hourlyBox {
+        width: 100%;
+      }
+
+      &-3 {
+        &-body-btnBox {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hourly {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landingPage {
+    &-search {
+      padding: 20px 20px 12px;
+
+      &-form {
+        width: 100%;
+      }
+    }
+  }
+
+  .landingPage .favourite {
+    width: 100%;
+  }
+
+  .result {
+    &-current {
+      padding: 32px 12px;
+      margin: 0;
+    }
+  }
+
+  .hourly {
+    padding: 8px;
+
+    &-content {
+      &-img {
+        width: 50px;
+      }
+
+      &-info {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .daily {
+    padding: 8px;
+
+    &-content {
+      &-img {
+        width: 50px;
+      }
+
+      &-info {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .accordionItem {
+    &-head {
+      &-realfeel {
+        display: none;
+      }
+    }
+
+    &-body {
+      flex-direction: column;
+      align-items: center;
+
+      &-col {
+        width: 90%;
+
+        &-info {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .hourly {
+    &-content {
+      &-img {
+        width: 25px;
+      }
+    }
+  }
+
+  .accordionItem {
+    &-head {
+      &-img {
+        width: 50px;
+      }
+
+      &-day,
+      &-temp {
+        font-size: 16px;
+      }
+    }
+
+    &-body {
+      &-col {
+        width: 100%;
+      }
+    }
+  }
+}
